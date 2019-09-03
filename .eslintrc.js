@@ -4,7 +4,7 @@ module.exports = {
 		'es6': true,
 		'node': true
 	},
-	'extends': 'eslint:recommended',
+	'extends': ['eslint:recommended', 'prettier'],
 	'globals': {
 		'Atomics': 'readonly',
 		'SharedArrayBuffer': 'readonly'
@@ -17,7 +17,8 @@ module.exports = {
 		'sourceType': 'module'
 	},
 	'plugins': [
-		'react'
+            'react',
+            'prettier'
 	],
 	'rules': {
 		'indent': [
@@ -35,6 +36,7 @@ module.exports = {
 		'semi': [
 			'error',
 			'always'
-		]
+        ],
+        'prettier/prettier':'error'
 	}
 };
